@@ -1,5 +1,6 @@
 ansible
 git
+git-delta
 htop
 httpd
 maven
