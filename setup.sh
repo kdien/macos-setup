@@ -9,8 +9,9 @@ ln -sf $HOME/dotfiles/zsh/.zsh_functions $HOME/.zsh_functions
 ln -sf $HOME/dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/vim/.vimrc $HOME/.vimrc
 
-# Tap brew font repo
+# Tap additional brew repos
 brew tap homebrew/cask-fonts
+brew tap homebrew/cask-drivers
 
 # Install brew formulae
 brew install $(cat ./formulae)
