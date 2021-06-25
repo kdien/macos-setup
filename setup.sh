@@ -11,6 +11,9 @@ ln -sf $HOME/dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/vim/.vimrc $HOME/.vimrc
 ln -sf $(brew --prefix)/opt/powerlevel10k $HOME/powerlevel10k
 
+# Get baseline git config
+cp $HOME/dotfiles/git/config $HOME/.gitconfig
+
 # Tap additional brew repos
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-drivers
