@@ -8,6 +8,7 @@ neofetch
 node
 openjdk@11
 openjdk@8
+powerlevel10k
 shellcheck
 tldr
 tmux
