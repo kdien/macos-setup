@@ -22,3 +22,6 @@ brew install $(cat ./formulae)
 # Install brew casks
 brew install --cask $(cat ./casks)
 
+# Set up symlink for OpenJDK11
+sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+
