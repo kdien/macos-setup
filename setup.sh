@@ -9,7 +9,7 @@ ln -sf $HOME/dotfiles/zsh/.zsh_functions $HOME/.zsh_functions
 ln -sf $HOME/dotfiles/zsh/.p10k.zsh $HOME/.p10k.zsh
 ln -sf $HOME/dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/vim/.vimrc $HOME/.vimrc
-ln -sf /opt/homebrew/opt/powerlevel10k $HOME/powerlevel10k
+ln -sf $(brew --prefix)/opt/powerlevel10k $HOME/powerlevel10k
 
 # Tap additional brew repos
 brew tap homebrew/cask-fonts
@@ -23,5 +23,5 @@ brew install $(cat ./formulae)
 brew install --cask $(cat ./casks)
 
 # Set up symlink for OpenJDK11
-sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+sudo ln -sfn $(brew --prefix)/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 
