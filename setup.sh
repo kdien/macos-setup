@@ -14,6 +14,10 @@ ln -sf $(brew --prefix)/opt/powerlevel10k $HOME/powerlevel10k
 # Get baseline git config
 cp $HOME/dotfiles/git/config $HOME/.gitconfig
 
+# Get ssh config
+mkdir -p $HOME/.ssh
+cat $HOME/dotfiles/ssh/config >> $HOME/.ssh/config
+
 # Tap additional brew repos
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-drivers
