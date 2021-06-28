@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Hide dock and remove delay
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+killall Dock
+
 # Clone dotfiles and setup symlinks
 git clone https://github.com/kdien/dotfiles.git $HOME/dotfiles
 [[ -f $HOME/.zshrc ]] && mv $HOME/.zshrc $HOME/.zshrc.bak
