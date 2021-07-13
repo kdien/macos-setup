@@ -16,6 +16,8 @@ ln -sf $HOME/dotfiles/zsh/.p10k.zsh $HOME/.p10k.zsh
 ln -sf $HOME/dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/vim/.vimrc $HOME/.vimrc
 ln -sf $(brew --prefix)/opt/powerlevel10k $HOME/powerlevel10k
+ln -sf $HOME/dotfiles/spectacle "$HOME/Library/Application Support/Spectacle"
+ln -sf $HOME/dotfiles/rightzoom "$HOME/Library/Application Support/Right Zoom"
 
 # Get baseline git config
 cp $HOME/dotfiles/git/config $HOME/.gitconfig
