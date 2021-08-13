@@ -6,6 +6,9 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 killall Dock
 
+# Fix font smoothing for non-Retina displays
+defaults -currentHost write -g AppleFontSmoothing -int 1
+
 # Clone dotfiles and setup symlinks
 git clone https://github.com/kdien/dotfiles.git $HOME/dotfiles
 [[ -f $HOME/.zshrc ]] && mv $HOME/.zshrc $HOME/.zshrc.bak
