@@ -9,6 +9,9 @@ killall Dock
 # Fix font smoothing for non-Retina displays
 defaults -currentHost write -g AppleFontSmoothing -int 1
 
+# Enable Debug menu in Safari
+defaults write com.apple.Safari IncludeInternalDebugMenu 1
+
 # Clone dotfiles and setup symlinks
 git clone https://github.com/kdien/dotfiles.git $HOME/dotfiles
 [[ -f $HOME/.zshrc ]] && mv $HOME/.zshrc $HOME/.zshrc.bak
