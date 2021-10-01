@@ -1,4 +1,6 @@
 ansible
+awscli
+dos2unix
 git
 git-delta
 htop
@@ -10,6 +12,8 @@ openjdk@11
 openjdk@8
 powerlevel10k
 shellcheck
+tfenv
 tldr
 tmux
+tree
 vim
