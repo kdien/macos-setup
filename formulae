@@ -1,10 +1,13 @@
 ansible
+ansible-lint
 awscli
+coreutils
 dos2unix
 git
 git-delta
 htop
 httpd
+kubernetes-cli
 maven
 neofetch
 node
