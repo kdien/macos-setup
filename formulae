@@ -1,6 +1,7 @@
 ansible
 ansible-lint
 awscli
+bash
 coreutils
 dos2unix
 git
@@ -10,8 +11,11 @@ httpd
 kubernetes-cli
 maven
 neofetch
+neovim
 node
+oh-my-posh
 openjdk@11
+openjdk@17
 openjdk@8
 powerlevel10k
 shellcheck
