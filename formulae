@@ -2,12 +2,15 @@ ansible
 ansible-lint
 awscli
 bash
+bat
 coreutils
 dos2unix
+fd
+fzf
 git
 git-delta
 htop
-httpd
+jq
 kubernetes-cli
 maven
 neofetch
@@ -17,7 +20,7 @@ oh-my-posh
 openjdk@11
 openjdk@17
 openjdk@8
-powerlevel10k
+ripgrep
 shellcheck
 tfenv
 tldr
