@@ -2,6 +2,7 @@ ansible
 ansible-lint
 awscli
 bash
+bash-completion@2
 bat
 coreutils
 dos2unix
@@ -9,6 +10,7 @@ fd
 fzf
 git
 git-delta
+gnu-sed
 htop
 jq
 kubernetes-cli

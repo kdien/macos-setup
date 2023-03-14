@@ -12,6 +12,10 @@ killall Dock
 # Enable Debug menu in Safari
 defaults write com.apple.Safari IncludeInternalDebugMenu 1
 
+# Symlink .bashrc
+rm -f "$HOME"/.bashrc
+ln -sf "$HOME"/macos-setup/.bashrc "$HOME"/.bashrc
+
 # Clone dotfiles and setup symlinks
 git clone https://github.com/kdien/dotfiles.git "$HOME"/dotfiles
 ln -sf "$HOME"/dotfiles/tmux/.tmux.conf "$HOME"/.tmux.conf
@@ -19,11 +23,6 @@ ln -sf "$HOME"/dotfiles/neovim "$HOME"/.config/nvim
 ln -sf "$HOME"/dotfiles/alacritty "$HOME"/.config/alacritty
 ln -sf "$HOME"/dotfiles/kitty "$HOME"/.config/kitty
 ln -sf "$HOME"/dotfiles/powershell "$HOME"/.config/powershell
-
-cat >> "$HOME"/.bashrc <<'EOF'
-export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-[[ -f "$HOME"/dotfiles/bash/.bash_common ]] && . "$HOME"/dotfiles/bash/.bash_common
-EOF
 
 # Get baseline git config
 cp "$HOME"/dotfiles/git/config "$HOME"/.gitconfig
