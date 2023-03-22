@@ -33,7 +33,7 @@ cat "$HOME"/dotfiles/ssh/config >> "$HOME"/.ssh/config
 
 # Install homebrew
 if ! command -v brew &>/dev/null; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Tap additional brew repos
