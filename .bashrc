@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 export PATH
