@@ -37,6 +37,7 @@ cat "$HOME"/dotfiles/ssh/config >> "$HOME"/.ssh/config
 # Install homebrew
 if ! command -v brew &>/dev/null; then
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Tap additional brew repos
@@ -52,5 +53,3 @@ brew install --cask $(cat ./casks)
 # Add bash to list of eligible shell
 echo "$(brew --prefix)/bin/bash" | sudo tee -a /etc/shells
 
-# Set up symlink for OpenJDK17
-sudo ln -sfn "$(brew --prefix)"/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
