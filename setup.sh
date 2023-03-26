@@ -54,3 +54,6 @@ brew install --cask $(cat ./casks)
 # Add bash to list of eligible shell
 echo "$(brew --prefix)/bin/bash" | sudo tee -a /etc/shells
 
+# Set symlink for OpenJDK
+sudo ln -sfn "$(brew --prefix)/opt/openjdk/libexec/openjdk.jdk" /Library/Java/JavaVirtualMachines/openjdk.jdk
+
