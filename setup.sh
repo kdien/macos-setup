@@ -6,11 +6,8 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 killall Dock
 
-# Fix font smoothing for non-Retina displays
-# defaults -currentHost write -g AppleFontSmoothing -int 1
-
-# Enable Debug menu in Safari
-defaults write com.apple.Safari IncludeInternalDebugMenu 1
+# Disable AppleFontSmoothing
+defaults write -g AppleFontSmoothing -int 0
 
 # Symlink .bashrc
 rm -f "$HOME"/.bashrc
