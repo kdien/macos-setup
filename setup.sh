@@ -10,29 +10,30 @@ killall Dock
 defaults write -g AppleFontSmoothing -int 0
 
 # Symlink .bashrc
-rm -f "$HOME"/.bashrc
-ln -sf "$HOME"/macos-setup/.bashrc "$HOME"/.bashrc
+rm -f "$HOME/.bashrc"
+ln -sf "$HOME/macos-setup/.bashrc" "$HOME/.bashrc"
 
 # Source .bashrc
-echo '. "$HOME/.bashrc"' >> "$HOME"/.bash_profile
+echo '. "$HOME/.bashrc"' >> "$HOME/.bash_profile"
 
 # Create config directory
-mkdir -p "$HOME"/.config
+mkdir -p "$HOME/.config"
 
-# Clone dotfiles and setup symlinks
-git clone https://github.com/kdien/dotfiles.git "$HOME"/dotfiles
-ln -sf "$HOME"/dotfiles/tmux/.tmux.conf "$HOME"/.tmux.conf
-ln -sf "$HOME"/dotfiles/neovim "$HOME"/.config/nvim
-ln -sf "$HOME"/dotfiles/alacritty "$HOME"/.config/alacritty
-ln -sf "$HOME"/dotfiles/kitty "$HOME"/.config/kitty
-ln -sf "$HOME"/dotfiles/powershell "$HOME"/.config/powershell
+# Clone dotfiles and setup config
+git clone https://github.com/kdien/dotfiles.git "$HOME/dotfiles"
+ln -sf "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
+ln -sf "$HOME/dotfiles/neovim" "$HOME/.config/nvim"
+ln -sf "$HOME/dotfiles/powershell" "$HOME/.config/powershell"
+
+cp -r "$HOME/dotfiles/alacritty" "$HOME/.config/alacritty"
+cp -r "$HOME/dotfiles/kitty" "$HOME/.config/kitty"
 
 # Get baseline git config
-cp "$HOME"/dotfiles/git/config "$HOME"/.gitconfig
+cp "$HOME/dotfiles/git/config" "$HOME/.gitconfig"
 
 # Get ssh config
-mkdir -p "$HOME"/.ssh
-cat "$HOME"/dotfiles/ssh/config >> "$HOME"/.ssh/config
+mkdir -p "$HOME/.ssh"
+cat "$HOME/dotfiles/ssh/config" >> "$HOME/.ssh/config"
 
 # Install homebrew
 if ! command -v brew &>/dev/null; then
