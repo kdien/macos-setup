@@ -7,7 +7,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 killall Dock
 
 # Disable AppleFontSmoothing
-defaults write -g AppleFontSmoothing -int 0
+# defaults write -g AppleFontSmoothing -int 0
 
 # Symlink .bashrc
 rm -f "$HOME/.bashrc"
