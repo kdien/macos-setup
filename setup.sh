@@ -21,12 +21,17 @@ mkdir -p "$HOME/.config"
 
 # Clone dotfiles and setup config
 git clone https://github.com/kdien/dotfiles.git "$HOME/dotfiles"
-ln -sf "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
-ln -sf "$HOME/dotfiles/neovim" "$HOME/.config/nvim"
-ln -sf "$HOME/dotfiles/alacritty" "$HOME/.config/alacritty"
-ln -sf "$HOME/dotfiles/kitty" "$HOME/.config/kitty"
-ln -sf "$HOME/dotfiles/powershell" "$HOME/.config/powershell"
-ln -sf "$HOME/dotfiles/karabiner" "$HOME/.config/karabiner"
+configs=(
+    alacritty
+    karabiner
+    kitty
+    nvim
+    powershell
+    tmux
+)
+for config in "${configs[@]}"; do
+    ln -sf "$HOME/dotfiles/$config" "$HOME/.config/$config"
+done
 
 # Get baseline git config
 cp "$HOME/dotfiles/git/config" "$HOME/.gitconfig"
