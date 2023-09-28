@@ -24,10 +24,10 @@ git clone https://github.com/kdien/dotfiles.git "$HOME/dotfiles"
 configs=(
     alacritty
     karabiner
-    kitty
     nvim
     powershell
     tmux
+    wezterm
 )
 for config in "${configs[@]}"; do
     ln -sf "$HOME/dotfiles/$config" "$HOME/.config/$config"

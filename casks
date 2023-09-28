@@ -6,7 +6,6 @@ firefox
 font-meslo-lg-nerd-font
 google-chrome
 karabiner-elements
-kitty
 logi-options-plus
 logitech-unifying
 microsoft-remote-desktop
@@ -16,4 +15,5 @@ rectangle
 shottr
 visual-studio-code
 vlc
+wezterm
 zoom
