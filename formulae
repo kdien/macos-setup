@@ -15,6 +15,7 @@ goenv
 htop
 jq
 kubernetes-cli
+make
 neovim
 node
 openjdk@17
