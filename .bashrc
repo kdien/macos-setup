@@ -15,6 +15,4 @@ PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 [[ -f "$HOME/dotfiles/bash/.bash_common" ]] && . "$HOME/dotfiles/bash/.bash_common"
 
 PATH="$HOME/.local/bin:$PATH"
-PATH="$HOME/.goenv/shims:$PATH"
-
 export PATH
