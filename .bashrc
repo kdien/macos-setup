@@ -16,3 +16,5 @@ PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 
 PATH="$HOME/.local/bin:$PATH"
 export PATH
+
+export MANPATH="$MANPATH:$HOMEBREW_PREFIX/share/man"
