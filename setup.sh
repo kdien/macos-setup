@@ -26,6 +26,7 @@ configs=(
   karabiner
   nvim
   powershell
+  starship
   tmux
   wezterm
 )
